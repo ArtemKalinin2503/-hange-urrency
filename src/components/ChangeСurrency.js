@@ -3,7 +3,7 @@ import { connect } from 'react-redux'; //connect нужен для связи к
 import store from '../store';
 import {getData, actionTotal} from '../reducers'; //импортируем actions
 
-class MainComponent extends Component {
+class ChangeСurrency extends Component {
     //Компонент componentDidMount сработает сразу после загрузки
     componentDidMount() {
         this.props.fetchData(); //Вызываем thunk getData для получения ответа от сервера 
@@ -13,7 +13,7 @@ class MainComponent extends Component {
         let inpRub = parseInt(event.target.value); //Получим значение поля с Рублями
         let cursEuro = this.props.apiData.Valute.EUR.Value; //Получим ответ от сервера
         let courseTotal = inpRub / cursEuro;
-        let total = parseFloat(courseTotal.toFixed(1));
+        let total = parseFloat(courseTotal.toFixed(1)); //Приводим к типу
         store.dispatch(actionTotal(total));
     };
 
@@ -49,9 +49,9 @@ const mapDispatchToProps = {
 }
 
 //Обвернем данный компонент в connect для свзяи с хранилищем
-const ComponentMain = connect (
+const ComponentChange = connect (
     mapStateToProps,
     mapDispatchToProps
-)(MainComponent);
+)(ChangeСurrency);
 
-export default ComponentMain;
+export default ComponentChange;

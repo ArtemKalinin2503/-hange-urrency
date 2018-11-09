@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
 import axios from 'axios'; //Axios вместо fetch для сетевого запроса
 //Создаем actions с помощью расширения createAction (каждый action будет получать состояние и изменять его)
-export const actionSummaRubState = (summaRub) => {return {type: "Action_Summa_Rub", payload: summaRub}};
-export const actionSummaEuroState = (summaEuro) => {return {type: "Action_Summa_Euro", payload: summaEuro}};
 export const actionTotal = (total) => {return {type: "Action_Total", payload: total}};
 //Actions для get запроса
 export const fetchStarted = (isFetched)=>{return {type: "Is_Fetched", payload: isFetched}};
