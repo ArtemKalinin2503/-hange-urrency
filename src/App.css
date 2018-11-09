@@ -1,0 +1,17 @@
+.convector {
+	width: 100%;
+	max-width: 1410px;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid silver;
+	border-radius: 5px;
+}
+
+.convector__form label {
+	display: block;
+}
+
+.convector__input {
+	min-width: 100px;
+	padding: 10px;
+}
